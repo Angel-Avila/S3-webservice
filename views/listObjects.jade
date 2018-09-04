@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p List of Objects
+  
+  table
+    tr
+        td Name
+        td View
+    each object in objects
+        tr
+            td= object.Key
+            td #[a(href='/#{bucket}/#{object.Key}/') View]

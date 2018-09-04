@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to S3 Client
+  p List of Buckets
+  
+  table
+    tr
+        td Name
+        td View
+    each bucket in buckets
+        tr
+            td= bucket.Name
+            td #[a(href='/#{bucket.Name}/') View]
+
